@@ -1,0 +1,301 @@
+a {
+  text-decoration: none;
+}
+
+.sticky-header {
+  position: sticky !important;
+  top: 0; /* Position it at the top of the viewport */
+  z-index: 1020; /* Ensure it stays above other content */
+  background-color: #fff; /* Optional: Ensure a solid background */
+   /* Optional: Add shadow for better visibility */
+}
+
+.sticky-navbar {
+  position: sticky !important;
+  top:60px; 
+  z-index: 1010; /* Ensure it stays below the header but above content */
+  background-color: #fff; /* Match the header's background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1040;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease;
+  z-index: 1050;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* ========================= banner style ============================== */
+.offer-card {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Light gray for card background */
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.offer-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.offer-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #000; /* Black text for better visibility */
+}
+
+.offer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.offer-description {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.btn-check-out {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+/* deal of the day */
+.timer-box {
+  background: #2c3e50;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.bd-footer {
+  background-color: rgba(227, 224, 224, 0.785);
+}
+
+
+ /* ===================contact style======================== */
+ .contact_input_container {
+  border: 2px solid rgba(128, 128, 128, 0.511);
+  padding: 30px;
+}
+.contact_input_container input {
+  outline: none;
+  border-radius: 2px;
+  border: 2px solid rgba(128, 128, 128, 0.511);
+  padding-left: 5px;
+  background-color: rgba(131, 128, 128, 0.162);
+}
+.contact_input_container textarea {
+  outline: none;
+  border-radius: 2px;
+  border: 2px solid rgba(128, 128, 128, 0.511);
+  padding-left: 5px;
+  background-color: rgba(131, 128, 128, 0.162);
+
+}
+
+.form-control.error input {
+  border: 2px solid red;
+}
+.form-control.success input {
+  border: 2px solid green;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: red;
+}
+.form-control.success small {
+  visibility: hidden;
+}
+
+
+/* =================== */
+/* Styling for the product card container */
+
+
+ .featured__item__pic__hover {
+  bottom: 20px;
+}
+
+.featured__item__pic__hover {
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+  opacity: 0; 
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+  visibility: hidden; 
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -ms-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+.product-card-container:hover .featured__item__pic__hover {
+  bottom: 10px; 
+  opacity: 1;
+  visibility: visible; 
+}
+ .featured__item__pic__hover li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.featured__item__pic__hover li a {
+  font-size: 16px;
+  color: #1c1c1c;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  background: #ffffff;
+  display: block;
+  border-radius: 50%;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -ms-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.featured__item__pic__hover li a svg {
+  position: relative;
+  transform: rotate(0);
+  -webkit-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  -ms-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+.featured__item__pic__hover .fa {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.featured__item__pic__hover .fa-heart:before {
+  content: "\f004";
+}
+.featured__item__pic__hover li:hover a {
+  background: #198754;
+  border-color: #198754;
+}
+.featured__item__pic__hover li:hover a svg {
+  color: #ffffff;
+  transform: rotate(360deg);
+}
+
+.cart-container {
+  max-width: 1200px;
+}
+
+.cart-details-container {
+  border-radius: 8px;
+}
+
+.cart-details-header {
+  font-weight: bold;
+}
+
+.cart-btn {
+  transition: all 0.3s;
+}
+
+.cart-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cart-container h5,
+.cart-container h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.btn-danger {
+  background-color: orange;
+  border-color: orange;
+}
+
+.btn-danger:hover {
+  background-color: red;
+  border-color: red;
+}
+/* ================== popup style ================== */
+/* Overlay for the pop-up */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);  /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  /* Ensures the popup is on top */
+}
+
+.popup-content {
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  /* Limit the height to 80% of the viewport height */
+  overflow-y: auto; /* Make content scrollable if it exceeds the max-height */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);  /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  
+}
